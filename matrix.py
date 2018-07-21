@@ -1,11 +1,11 @@
 import random
 from copy import deepcopy
 class Matrix:
-    def __init__(self,nrows,ncols):
+    def __init__(self,name,nrows,ncols):
         """Construct a (nrows X ncols) matrix"""
         A=[]
-        print("Enter ",self," matrix's rows : ",nrows)
-        print("Enter ",self," matrix's cols : ",ncols)
+        print("Enter ",name," matrix's rows : ",nrows)
+        print("Enter ",name," matrix's cols : ",ncols)
         for i in range(0,nrows):
             A.append([])
             for j in range(0,ncols):
@@ -101,8 +101,8 @@ class Matrix:
                 print('')
         else:
             print("Matrixs' size should be in the same size.") 
-A=Matrix(3,4)
-B=Matrix(4,3)
+A=Matrix('A',3,4)
+B=Matrix('B',4,3)
 A.add(B.get())
 A.sub(B.get())
 A.mul(B.get())
